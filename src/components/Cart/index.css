@@ -4,6 +4,13 @@
   min-height: 75vh;
 }
 
+.cart-total-amount {
+  text-align: end;
+  font-weight: 500;
+  color: #3e4c59;
+  font-size: 20px;
+}
+
 @media screen and (min-width: 768px) {
   .cart-container {
     min-height: 90vh;

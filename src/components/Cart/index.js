@@ -10,6 +10,10 @@ const Cart = () => (
   <CartContext.Consumer>
     {value => {
       const {cartList} = value
+      const total = cartList.reduce(
+        (acc, cur) => acc + cur.quantity * cur.price,
+        0,
+      )
       const showEmptyView = cartList.length === 0
       return (
         <>
@@ -21,6 +25,7 @@ const Cart = () => (
               <div className="cart-content-container">
                 <h1 className="cart-heading">My Cart</h1>
                 <CartListView />
+                <h1 className="cart-total-amount">Total: Rs {total}</h1>
               </div>
             )}
           </div>
